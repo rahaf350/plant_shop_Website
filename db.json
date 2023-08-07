@@ -1,0 +1,122 @@
+{
+  "PlantFromData": [
+    {
+      "name": "شجرة زيتون",
+      "id": 1,
+      "price": 150,
+      "mainImage": "olive.png",
+      "classification": "bestSeller",
+      "size": "80 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": "",
+      "images": ""
+    },
+    {
+      "name": "بامبو",
+      "id": 2,
+      "price": 300,
+      "mainImage": "bamboo.png",
+      "classification": "bestSeller",
+      "size": "150 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 30,
+      "images": "bamboo.png,bambooRed.png,bambooBlack.png"
+    },
+    {
+      "name": "النبتة الحمراء",
+      "id": 3,
+      "price": 190,
+      "mainImage": "red.png",
+      "classification": "bestSeller",
+      "size": "80 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 3,
+      "images": "red.png,redRed.png,redBlack.png"
+    },
+    {
+      "name": "بروميلياد صيف",
+      "id": 4,
+      "price": 110,
+      "mainImage": "Bromeliad.png",
+      "classification": "bestSeller",
+      "size": "110 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 5,
+      "images": "Bromeliad.png,BromeliadRed.png,BromeliadBlack.png"
+    },
+    {
+      "name": "بروميلياد أناناس",
+      "id": 5,
+      "price": 170,
+      "mainImage": "Pineapple.png",
+      "classification": "bestSeller",
+      "size": "90 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 103,
+      "images": "Pineapple.png,PineappleRed.png,PineappleBlack.png"
+    },
+    {
+      "name": "مونستيرا",
+      "id": 6,
+      "price": 200,
+      "mainImage": "monstera.png",
+      "classification": "trending",
+      "size": "100 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 80,
+      "images": "monstera.png,monsteraRed.png,monsteraBlack.png"
+    },
+    {
+      "name": "زنبق السلام",
+      "id": 7,
+      "price": 190,
+      "mainImage": "lily.png",
+      "classification": "trending",
+      "size": "100 cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": "",
+      "images": "lily.png,lilyRed.png,lilyBlack.png"
+    },
+    {
+      "name": "شجرة المال",
+      "id": 8,
+      "price": 360,
+      "mainImage": "money.png",
+      "classification": "trending",
+      "size": "120cm",
+      "care": "أبق التربة رطبة لكن غير مبللة. يمكن أن يلحق الضرر بجذور النبات نتيجة الإفراط في سقاية التربة أو جفافها أكثر من اللازم وقد يمنع هذا نموه، كما يمكن أن تؤدي زيادة السقاية أو نقصها في بعض الحالات إلى قتله أيضًا.",
+      "inventory": 9,
+      "images": "money.png,moneyRed.png,moneyBlack.png"
+    },
+    {
+      "id": 9771526,
+      "user": {
+        "id": "123456",
+        "name": "rahaf musaad"
+      },
+      "category": "three",
+      "organizer": {
+        "id": "123456",
+        "name": "rahaf musaad"
+      },
+      "title": "5656",
+      "description": "5656",
+      "location": "5566"
+    },
+    {
+      "id": 2956495,
+      "user": {
+        "id": "123456",
+        "name": "rahaf musaad"
+      },
+      "category": "three",
+      "organizer": {
+        "id": "123456",
+        "name": "rahaf musaad"
+      },
+      "title": "tttttttttt",
+      "description": "tttttttttt",
+      "location": "ttttttttttt"
+    }
+  ]
+}
