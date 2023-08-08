@@ -1,11 +1,11 @@
 <template>
   <div class="contact container py-5 d-flex justify-content- flex-column">
       <h1 class="py-5">contact</h1>
-      <div>
+      <!-- <div>
         <ul>
           <li v-for="item in jsonData" :key="item.id">{{ item.name }}</li>
         </ul>
-      </div>
+      </div> -->
   </div>
 </template>
 
