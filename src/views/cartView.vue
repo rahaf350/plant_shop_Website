@@ -56,7 +56,7 @@
 
   <!-- Discount Code Input -->
   <div class="d-flex flex-row-reverse">
-    <b>كود الخصم</b>
+    <b class="ms-2">كود الخصم</b>
     <input v-model="discountCode" type="text" />
     <button class="dis-btn" @click="applyDiscount">تطبيق</button>
   </div>
