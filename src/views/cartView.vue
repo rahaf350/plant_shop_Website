@@ -42,14 +42,14 @@
 
           <div class=" left-div d-flex flex-row-reverse">
             <b >تكاليف الشحن</b>
-            <div  v-if="total > 500">مجاني</div>
+            <div  v-if="total > 200">مجاني</div>
             <div  v-else-if="total == 0">0</div>
             <div  v-else>35</div>
           </div>
 
           <div class="left-div d-flex flex-row-reverse">
             <b>الإجمالي</b>
-            <span  v-if="total > 500" class="total"> {{ total }}</span>
+            <span  v-if="total > 200" class="total"> {{ total }}</span>
             <span  v-else-if="total == 0" class="total">0</span>
             <span  v-else class="total"> {{ total + 35 }}</span>
           </div>
