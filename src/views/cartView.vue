@@ -44,7 +44,7 @@
             <b >تكاليف الشحن</b>
             <div  v-if="total > 500">مجاني</div>
             <div  v-else-if="total == 0">0</div>
-            <div  v-else-if="this.discountCode">مجاني</div>
+            <div  v-else-if="this.discountCode === 'rahaf'">مجاني</div>
             <div  v-else>35</div>
           </div>
           
@@ -52,7 +52,7 @@
             <b>الإجمالي</b>
             <span  v-if="total > 500" class="total"> {{ realTotal }}</span>
             <span  v-else-if="total == 0" class="total">0</span>
-            <span  v-else-if="this.discountCode"> {{ realTotal }}</span>
+            <span  v-else-if="this.discountCode === 'rahaf'"> {{ realTotal }}</span>
             <span  v-else class="total"> {{ realTotal + 35 }}</span>
           </div>
 
@@ -66,13 +66,13 @@
   <!-- Old Total Price -->
   <div class="left-div d-flex flex-row-reverse"  v-if="discountApplied" :class="{ 'hidden': !discountApplied }">
     <b>الإجمالي (قبل الخصم)</b>
-    <span class="total old-price" :class="{ 'discount-applied': discountApplied, 'hidden': !discountApplied }">{{ totalBeforeDiscount }}</span>
+    <span class="total old-price" :class="{ 'discount-applied': discountApplied, 'hidden': !discountApplied, 'hidden': this.discountCode == '' }">{{ totalBeforeDiscount }}</span>
   </div>
 
   <!-- New Total Price After Discount -->
   <div class="left-div d-flex flex-row-reverse" v-if="discountApplied" :class="{ 'hidden': !discountApplied }">
     <b>الإجمالي (بعد الخصم)</b>
-    <span class="total new-price" >{{ totalAfterDiscount }}</span>
+    <span class="total new-price" :class="{'hidden': this.discountCode == ''}" >{{ totalAfterDiscount }}</span>
   </div>
   <button class="sub-btn">إجراء الطلب</button>
 
