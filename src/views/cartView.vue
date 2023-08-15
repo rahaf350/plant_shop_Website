@@ -54,8 +54,25 @@
             <span  v-else class="total"> {{ total + 35 }}</span>
           </div>
 
+  <!-- Discount Code Input -->
+  <div class="d-flex flex-row-reverse">
+    <b>كود الخصم</b>
+    <input v-model="discountCode" type="text" />
+    <button class="dis-btn" @click="applyDiscount">تطبيق</button>
+  </div>
 
-        <button>إجراء الطلب</button>
+  <!-- Old Total Price -->
+  <div class="left-div d-flex flex-row-reverse"  v-if="discountApplied" :class="{ 'hidden': !discountApplied }">
+    <b>الإجمالي (قبل الخصم)</b>
+    <span class="total old-price" :class="{ 'discount-applied': discountApplied, 'hidden': !discountApplied }">{{ totalBeforeDiscount }}</span>
+  </div>
+
+  <!-- New Total Price After Discount -->
+  <div class="left-div d-flex flex-row-reverse" v-if="discountApplied" :class="{ 'hidden': !discountApplied }">
+    <b>الإجمالي (بعد الخصم)</b>
+    <span class="total new-price" >{{ totalAfterDiscount }}</span>
+  </div>
+        <button class="sub-btn">إجراء الطلب</button>
 
 
 
@@ -74,6 +91,9 @@
     name: 'cartCom',
     data() {
       return {
+        discountCode: "",
+    discountApplied: false,
+        
       }
     },
     computed: {
@@ -99,12 +119,26 @@
     }, {});
     return Object.values(groupedItems);
   },
-    total() {
-      return this.$store.state.cart.total
-    },
+  total() {
+    let total = this.$store.state.cart.total;
+
+    // Apply discount if valid discount code is entered
+    if (this.discountCode === "rahaf") {
+      total *= 0.9; // Apply 10% discount
+    }
+
+    return total;
+  },
     priceItem(){
       return this.$store.state.cart.priceItem
     },
+    totalBeforeDiscount() {
+    return this.$store.state.cart.total;
+  },
+
+  totalAfterDiscount() {
+    return this.total.toFixed(2);
+  },
   },
   methods: {
     getImageUrl(imageName) {
@@ -117,6 +151,17 @@
     decrementItem(item) {
       this.$store.commit("decrementCart", item);
     },
+    applyDiscount() {
+    if (this.discountCode === "rahaf") {
+      // Apply discount
+      this.discountApplied = true;
+      // Show a success message or take any additional actions
+      console.log("Discount applied!");
+    } else {
+      // Show an error message or take any additional actions
+      console.log("Invalid discount code!");
+    }
+  },
   },
     created() {
       // this.$store.dispatch('fetchJsonData');
@@ -179,9 +224,32 @@
     width: 100vw;
     height: 100vh;
   }
-  .left button{
+  .sub-btn{
     padding: 1% 10%;
     margin-top: 5%;
+  }
+  .dis-btn{
+    margin: 0px;
+  }
+  .left input{
+    width: 200px;
+    height: 30px;
+  }
+  .old-price {
+    text-decoration: line-through;
+    color: red;
+  }
+  
+  .new-price {
+    color: green;
+  }
+  
+  .discount-applied .old-price {
+    text-decoration: none;
+    color: red;
+  }
+  .hidden {
+    display: none;
   }
   @media (min-width:991px) and (max-width:1920px) {
     .left {
@@ -221,9 +289,7 @@
       width: 90vw;
     padding: 2%;
   }
-  .left button{
-    margin: 10px;
-  }
+
   }
   </style>
   
