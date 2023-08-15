@@ -52,7 +52,7 @@
   },
     },
         created() {
-          this.$store.dispatch('fetchJsonData')
+          // this.$store.dispatch('fetchJsonData')
       // plantDB.getEvents()
       //     .then(response => {
       //       this.PlantFromData = response.data // For now, logs out the response

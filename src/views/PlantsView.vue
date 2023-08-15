@@ -60,16 +60,12 @@
           })
   },
     },
-      created() {
-          this.$store.dispatch('fetchJsonData')
-      // plantDB.getEvents()
-      //     .then(response => {
-      //       this.PlantFromData = response.data // For now, logs out the response
-      //     })
-      //     .catch(error => {
-      //       console.log('There was an error:', error.response) // Logs out the error
-      //     })
-      },
+    created() {
+  // this.$store.dispatch('fetchJsonData')
+  //   .catch(error => {
+  //     console.error('Error fetching JSON data:', error);
+  //   });
+},
     computed: {
       ...mapState({
       jsonData: state => state.jsonData

@@ -119,7 +119,7 @@
     },
   },
     created() {
-      this.$store.dispatch('fetchJsonData');
+      // this.$store.dispatch('fetchJsonData');
       window.scrollTo(0, 0);
   },
 }

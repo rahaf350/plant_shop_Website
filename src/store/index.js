@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from 'axios';
+import jsonData from "@/json/jsonPlant.json";
+
 
 Vue.use(Vuex);
 
@@ -12,7 +13,7 @@ export default new Vuex.Store({
       items: [],
       priceItem: 0
     },
-    jsonData: [],
+    jsonData: jsonData,
   },
 
   getters: {
@@ -24,13 +25,17 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    fetchJsonData({ commit }) {
-      return axios.get('http://localhost:3000/PlantFromData')
-        .then(response => {
-          commit('setJsonData', response.data)
-        })
-    },
+    // fetchJsonData({ commit }) {
+    //   return axios.get('/api/PlantFromData')
+    //     .then(response => {
+    //       commit('setJsonData', response.data);
+    //     })
+    //     .catch(error => {
+    //       console.error('Error fetching JSON data:', error);
+    //     });
+    // },
   },
+  
   mutations: {
     setJsonData(state, data) {
       state.jsonData = data
