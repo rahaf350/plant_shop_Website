@@ -103,13 +103,13 @@
     width: 300px;
     height: auto;
     margin:15px;
-    border: 2px solid #667c67;
+    border: 1px solid #1c2e0d;
     border-radius: 10px;
   }
   .eachPlant img {
     width:250px;
     height: 300px;
-    border: 1px solid #667c67;
+    border: 1px solid #1c2e0d;
     border-radius: 10px;
   }
   .options img {
@@ -120,6 +120,7 @@
     color:red;
     margin: 0;
   }
+
   .color-option{
     padding: 0px 10px;
     border: 1px solid #667c67;
@@ -127,17 +128,17 @@
     border-radius: 100%;
   }
  .btn1{
-    background-color: #987965;
+    background-color: #667c67;
     width: 100%;
     margin: 10px 0 2px 0;
     width:274px
     
   }
   .btn1:hover{
-    background-color: #bd9e89;
+    background-color: #5e715f;
   }
   button{
-    border: 1px solid #667c67;
+    border:none;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -145,10 +146,10 @@
     padding: 5px 0;
   }
   button:hover {
-    background-color: #869a87;
+    background-color: #15220a;
   }
   .btn2{
-    background-color: #667c67;
+    background-color: #1c2e0d;
     margin: 2px 0 10px 0;
 
   }
