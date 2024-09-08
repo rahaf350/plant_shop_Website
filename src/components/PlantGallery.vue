@@ -18,17 +18,20 @@
             <span class="color-option" :style="{ backgroundColor: colors[x % colors.length] }"></span>
           </div> 
         </div> -->
-
+<div class="ifelse">
           <p v-if="eachPlant.inventory > 10"></p>
           <p v-else-if="eachPlant.inventory <= 10 && eachPlant.inventory > 0">المتبقي: {{eachPlant.inventory}}</p>
           <p v-else>غير متوفر</p>
+        </div>
           <router-link :to="{name: 'PlantInfoView', params: {PlantId:eachPlant.id} }">
         <button class="btn1">مواصفات النبتة</button>
           </router-link>
+
         <button class="btn2" @click="addToCart(eachPlant)" :disabled="!eachPlant.inventory" :class="{disButton:!eachPlant.inventory}">اضف الى السلة</button>
     </div>
    </div> 
   </div>
+
 
   <!--TRENDING-->
   <div class="trending  py-5 d-flex flex-column justify-content-center justify-content-lg-end">
@@ -52,9 +55,11 @@
         <p v-if="eachPlant.inventory > 10"></p>
         <p v-else-if="eachPlant.inventory <= 10 && eachPlant.inventory > 0">المتبقي: {{eachPlant.inventory}}</p>
         <p v-else>غير متوفر</p>
+
         <router-link class="w-100" :to="{name: 'PlantInfoView', params: {PlantId:eachPlant.id} }">
           <button class="btn1">مواصفات النبتة</button>
         </router-link>
+        
         <button   class="btn2" @click="addToCart(eachPlant)" :disabled="!eachPlant.inventory" :class="{disButton:!eachPlant.inventory}">اضف الى السلة</button>
   </div>
  </div> 
@@ -84,6 +89,9 @@
       getImageUrl(imageName) {
           let image = require.context('@/assets/img/');
           return image('./'+imageName);
+      },
+      getFrameUrl(frameUrl) {
+          return frameUrl;
       },
       addToCart(x) {
           this.$store.commit('incrementCart',
@@ -139,13 +147,13 @@
     width: 300px;
     height: auto;
     margin:15px;
-    border: 2px solid #667c67;
+    border: 1px solid #1c2e0d;
     border-radius: 10px;
   }
   .eachPlant img {
     width:250px;
     height: 300px;
-    border: 1px solid #667c67;
+    border: 1px solid #1c2e0d;
     border-radius: 10px;
   }
   .options img {
@@ -156,6 +164,7 @@
     color:red;
     margin: 0;
   }
+
   .color-option{
     padding: 0px 10px;
     border: 1px solid #667c67;
@@ -163,17 +172,17 @@
     border-radius: 100%;
   }
  .btn1{
-    background-color: #987965;
+    background-color: #667c67;
     width: 100%;
     margin: 10px 0 2px 0;
     width:274px
     
   }
   .btn1:hover{
-    background-color: #bd9e89;
+    background-color: #5e715f;
   }
   button{
-    border: 1px solid #667c67;
+    border:none;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -181,10 +190,10 @@
     padding: 5px 0;
   }
   button:hover {
-    background-color: #869a87;
+    background-color: #15220a;
   }
   .btn2{
-    background-color: #667c67;
+    background-color: #1c2e0d;
     margin: 2px 0 10px 0;
 
   }
