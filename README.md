@@ -1,5 +1,5 @@
 # Nabta
-Plant store developed using Vue.js, vueX, Tailwind.css. This is my first projict with Vue <3
+Plant store developed using Vue.js, vueX, Tailwind.css. This is my first project with Vue <3
 
 # URL
 https://nabta.netlify.app
